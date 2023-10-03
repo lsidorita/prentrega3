@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/react-toastify/8.0.3/react-toastify.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-content">
+                <p class="section-subtext">Envíame un correo</p>
+                <h3 class="section-headtext">Contacto</h3>
+                <form id="contact-form">
+                    <label class="flex flex-col">
+                        <span class="text-label">Tu nombre:</span>
+                        <input type="text" id="name" class="input-field">
+                    </label>
+                    <label class="flex flex-col">
+                        <span class="text-label">Correo:</span>
+                        <div class="input-with-button">
+                            <input type="email" id="email" class="input-field">
+                            <div class="button-group">
+                                <button id="saveEmailButton" class="save-button">Guardar</button>
+                                <button id="recoverEmailButton" class="recover-button">Recuperar</button>
+                                <button id="deleteEmailButton" class="delete-button">Borrar</button>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="flex flex-col">
+                        <span class="text-label">Mensaje o consulta:</span>
+                        <textarea rows="7" id="message" class="input-field textarea-field" placeholder="Tienes algo para decirme?"></textarea>
+                    </label>
+                    <button type="submit" class="submit-button">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <div class="earth-canvas"></div>
+    </div>
+    <div id="toast-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
